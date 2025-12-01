@@ -35,3 +35,13 @@
   display: block;
   border-radius: 6px;
 }
+
+.text-center{
+  text-align: center;
+}
+input{
+  margin: 20px;
+  padding: 5px;
+  border-radius: 10px;
+  
+}
