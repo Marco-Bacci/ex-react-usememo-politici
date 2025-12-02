@@ -1,4 +1,5 @@
-import { useState, useEffect, useMemo } from "react";
+import React, { useState, useEffect, useMemo } from "react";
+import PoliCard from "./components/poliCard";
 function App() {
   const [politicians, setPoliticians] = useState([]);
   const [search, setSearch] = useState("");
@@ -30,16 +31,7 @@ function App() {
       />
       <div className="row">
         {filteredPoliticians.map((poli) => (
-          <div className="col-4" key={poli.id}>
-            <div className="card">
-              <h2>{poli.name}</h2>
-              <img src={poli.image} alt={poli.name} />
-              <p>
-                <strong>{poli.position}</strong>
-              </p>
-              <p>{poli.biography}</p>
-            </div>
-          </div>
+          <PoliCard key={poli.id} {...poli}/>
         ))}
       </div>
     </div>
