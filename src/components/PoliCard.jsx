@@ -1,4 +1,6 @@
-const PoliCard = ({ name, image, position, biography }) => {
+import React from "react";
+const PoliCard = React.memo(({ name, image, position, biography }) => {
+  console.log("card");
   return (
     <div className="col-4">
       <div className="card">
@@ -11,6 +13,5 @@ const PoliCard = ({ name, image, position, biography }) => {
       </div>
     </div>
   );
-};
-
+});
 export default PoliCard;
